@@ -11,15 +11,20 @@ runtype="${1:-build}"
 rm -f yuidoc.json
 sed "s%{pundit-version}%${pname}%g" yuidoc.json-template > yuidoc.json
 
-[ $runtype == 'build' ] && { 
+if [ $runtype == 'build' ] 
+    then
     echo "Building the docs : \n\n"; 
     yuidoc
-}
+fi
 
-[ $runtype == 'lint' ] && { 
-    echo "Linting your code : \n\n"; 
+if [ $runtype == 'lint' ] 
+then
+    echo "Linting your code : \n\n";
     yuidoc --lint
-    [ $? -eq 0 ] && { echo "No errors found in the comments. Congratulations!"; }
-}
+    if [ $? -eq 0 ]
+    then
+        echo "No errors found in the comments. Congratulations!"; 
+    fi
+fi
 
 rm -f yuidoc.json

@@ -3,7 +3,7 @@
 
 To be able to build the docs you will need a nodejs installation and the 
 yuidoc component: 
-# npm -g install yuidoc
+# npm -g install yuidocjs
 
 Before building the docs, you can do a dry run on the comments and see if 
 there's errors with "./build_docs.sh lint". 

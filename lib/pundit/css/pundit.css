@@ -1375,6 +1375,9 @@ span.pundit-gui-button {
     -moz-transition-property: padding-bottom;
     -moz-transition-duration: 1s;
 
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+
     background-color: #333;
     height: 17px;
     display: inline-block;
@@ -1779,7 +1782,7 @@ body.pundit-aw-shown {
     padding: 10px;
     display: block;
     text-align: center;
-    height: 25px;
+    height: 42px;
 }
 #pundit-login-popup-content div#pundit-login-popup-buttons span {
     padding: 3px 10px 0px; 
@@ -1792,6 +1795,8 @@ body.pundit-aw-shown {
 	line-height: 17px;
 	display: inline-block;
     font-size: 14px;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
 	-webkit-transition-property: background-color;
 	-webkit-transition-duration: 0.4s;
     -moz-transition-property: background-color;
