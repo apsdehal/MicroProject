@@ -21,3 +21,15 @@ input[type=text]{
 a{
 	color:#999;
 }
+
+.entities table{
+	margin: auto;
+	margin-top: 30px;
+	text-align: center;
+	border-collapse: collapse;
+}
+
+.entities table th, td{
+	width: 300px;
+	border: 1px white solid;
+}
