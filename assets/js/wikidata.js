@@ -5,8 +5,6 @@
  */
 
 var Api = {
-	url,
-	lingo,
 	init: function(u,l){
 		this.url = u;
 		this.lingo = l;
@@ -25,11 +23,13 @@ var Api = {
 
 
 Api.init('https://www.wikidata.org/w/api.php', 'en');
-
+console.log(Api.url);
 $("#searchbox").bind('keydown', function(e){
 	//Enter key pressed
 	if(e.keyCode == 13){
 		var term = $(this).val();
-		console.log( Api.searchEntities('item', term));
+		Api.searchEntities('item', term).done(function(data){
+			console.log(data);
+		});
 	}
 })
